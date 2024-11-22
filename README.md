@@ -4,7 +4,7 @@
 This development board includes a 32-bit RISC-V processor, 16KB of flash memory, and 2KB of SRAM, running at a clock speed of 24MHz. It has 15 GPIO pins for hardware interfacing and supports communication protocols like I2C, SPI, and USART, making it suitable for a variety of projects. The program helps participants understand the RISC-V ecosystem and apply their knowledge by creating and testing hardware applications.
 
 <details>
-<summary><b>Task 1:</b> C based program for sum of n numbers</summary>   
+<summary><b>Task 1:</b> C based and RISC-V based programs for sum of n numbers</summary>   
 <br>
 
 C based
@@ -52,7 +52,7 @@ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 Now the file has been saved "sum1ton.o"
 In the new tab we need to give the command ``` riscv64-unknown-elf-objdump -d sum1ton.o | less ```
 
-Now the assembly language code for O1 is :
+Now the assembly language code for ```O1``` is :
 
 ![o1_output](https://github.com/user-attachments/assets/f21d9c9f-a1ed-42e7-b4d1-5ee00920266e)
 
@@ -65,10 +65,10 @@ It is calculated as
 Now similarly we need to execute the code for ``` Ofast ``` command
 
 The input is shown as :
-
+![Ofast_input](https://github.com/user-attachments/assets/540e85aa-e6cc-47ef-bdf0-20f368c8fa88)
 
 The output of the ``` Ofast ``` command is :
-
+![Ofast_output](https://github.com/user-attachments/assets/290aae34-f470-4972-ba2e-4a1d87828e40)
 
 Again if we calculate the number of instructions , we get the instructions as 11.
 It is calculated as 

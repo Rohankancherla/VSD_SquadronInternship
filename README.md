@@ -11,9 +11,10 @@ C based
 ------------------------------------------
 
 Install leafpad editor 
+
 *Use the following command for installing leafpad*
 ```
-sud apt install leafpad
+sudo apt install leafpad
 ```
 
 </details>

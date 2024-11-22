@@ -45,8 +45,14 @@ For compiling the above code in RISCV we use the command :
 ```
 riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ```
+
+![o1_input](https://github.com/user-attachments/assets/c131b9bc-9874-49b2-91de-0706cc822201)
+
+
 Now the file has been saved "sum1ton.o"
 In the new tab we need to give the command ``` riscv64-unknown-elf-objdump -d sum1ton.o | less ```
+
+![o1_output](https://github.com/user-attachments/assets/f21d9c9f-a1ed-42e7-b4d1-5ee00920266e)
 
 
 

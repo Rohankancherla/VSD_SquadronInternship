@@ -20,4 +20,13 @@ Now we need to write a program in c for sum of 1 to n numbers, and save the file
 
 ![c program sum1ton](https://github.com/user-attachments/assets/b180bdc1-1a9e-4b64-b215-1f6f199b9d8d)
 
+Now after we compile this and run using the commands :
+
+```
+gcc sum1ton.c
+./a.out
+
+```
+
+
 </details>

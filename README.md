@@ -51,9 +51,17 @@ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 
 Now the file has been saved "sum1ton.o"
 In the new tab we need to give the command ``` riscv64-unknown-elf-objdump -d sum1ton.o | less ```
+Now the assembly language code for O1 is :
 
 ![o1_output](https://github.com/user-attachments/assets/f21d9c9f-a1ed-42e7-b4d1-5ee00920266e)
 
+Here if we calculate the number of instructions, we get the total instructions as 11.
+It is calculated as 
+``` 
+101b0 - 10184 = 2c
+2c/4 = b  => 11
+```
+Now similarly we need to execute the code for ``` Ofast ``` command
 
 
 

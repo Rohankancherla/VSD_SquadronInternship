@@ -41,7 +41,7 @@ The terminal output of the above the commad :
 
 ![viewing_C_sumcode](https://github.com/user-attachments/assets/217bbee9-c294-48e4-9610-2883d24159fa)
 
-For compiling the above code in RISCV we use the command :
+For compiling the above code in RISC-V we use the command :
 ```
 riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ```
@@ -65,9 +65,11 @@ It is calculated as
 Now similarly we need to execute the code for ``` Ofast ``` command
 
 The input is shown as :
+
 ![Ofast_input](https://github.com/user-attachments/assets/540e85aa-e6cc-47ef-bdf0-20f368c8fa88)
 
 The output of the ``` Ofast ``` command is :
+
 ![Ofast_output](https://github.com/user-attachments/assets/290aae34-f470-4972-ba2e-4a1d87828e40)
 
 Again if we calculate the number of instructions , we get the instructions as 11.

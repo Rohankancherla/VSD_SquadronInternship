@@ -10,5 +10,10 @@ This development board includes a 32-bit RISC-V processor, 16KB of flash memory,
 C based
 ------------------------------------------
 
+Install leafpad editor 
+*Use the following command for installing leafpad*
+```
+sud apt install leafpad
+```
 
 </details>

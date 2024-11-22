@@ -41,6 +41,13 @@ The terminal output of the above the commad :
 
 ![viewing_C_sumcode](https://github.com/user-attachments/assets/217bbee9-c294-48e4-9610-2883d24159fa)
 
+For compiling the above code in RISCV we use the command :
+```
+riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+```
+Now the file has been saved "sum1ton.o"
+In the new tab we need to give the command ``` riscv64-unknown-elf-objdump -d sum1ton.o | less ```
+
 
 
 

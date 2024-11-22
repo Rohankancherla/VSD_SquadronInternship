@@ -25,8 +25,12 @@ Now after we compile this and run using the commands :
 ```
 gcc sum1ton.c
 ./a.out
-
 ```
+The output of the c code is :
+
+![C sum1ton_output](https://github.com/user-attachments/assets/37f78ab9-44da-4f6a-ab16-8caafe2d0a61)
+
+
 
 
 </details>

@@ -37,6 +37,10 @@ We can view the sum code using the following command :
 ```
 cat sum1ton.c
 ```
+The terminal output of the above the commad :
+
+![viewing_C_sumcode](https://github.com/user-attachments/assets/217bbee9-c294-48e4-9610-2883d24159fa)
+
 
 
 

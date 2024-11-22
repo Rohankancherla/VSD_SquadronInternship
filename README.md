@@ -18,4 +18,6 @@ sudo apt install leafpad
 ```
 Now we need to write a program in c for sum of 1 to n numbers, and save the file as "sum1ton.c"
 
+/home/vsduser/Pictures/c program sum1ton.png
+
 </details>

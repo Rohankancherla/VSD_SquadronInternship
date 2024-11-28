@@ -104,8 +104,26 @@ Now we can give the input as follows:
 
 ![tsak2_spike_pk_sum1ton](https://github.com/user-attachments/assets/874bef71-58fc-4e10-83f4-f7db94558673)
 
+The assembly langguage program for ```Ofast``` compiler is :
+
+
+![new_task1_12instr](https://github.com/user-attachments/assets/56d2ec70-05cc-4ea6-ac71-ca8d580f2949)
+
 
 Now let us debug this code:
+
+![Task2_Ofast_output](https://github.com/user-attachments/assets/949c04ad-a5dd-4735-8378-8465036c514e)
+
+*We debug the assembly language program using the command ```spike -d pk sum1ton.o``` .
+*In this debugger we debug the code for each instruction (or till the required instruction) 
+* At the address of ```100b4``` the value of the stack pointer is ```0x0000003ffffffb50``` and after the executing the next instruction we get the value of the stackl pointer as ```0x0000003ffffffb40```.
+
+The next instruction is executed using the command ```  addi    sp, sp, -16 ``` . So if we subtract 16 in decimal it is equivalent to 10 in hexadecimal which is shown below in the calculator :
+
+![task2_Ofast_calculator](https://github.com/user-attachments/assets/454bee73-e31d-4338-8c1a-d828e46f799e)
+
+
+
 
 
 

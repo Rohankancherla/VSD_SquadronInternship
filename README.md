@@ -83,7 +83,7 @@ It is calculated as
 ------------------------------------
 
 <details>
-<summary><b>Task 2:</b> ### Simulating and Debugging C code with SPIKE </summary>   
+<summary><b>Task 2:</b> Simulating and Debugging C code with SPIKE </summary>   
 <br>
 
 Spike simulation

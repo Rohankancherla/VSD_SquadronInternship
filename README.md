@@ -77,10 +77,12 @@ It is calculated as
 2c/4 = b  => 11
 ```
 </details>
+
 ------------------------------------
 
 <details>
-<summary><b>Task 2:</b> C based and RISC-V based programs for sum of n numbers</summary>   
+<summary><b>Task 2:</b> C </summary>
+
 
 In the previous task we have seen the contents of the assembly language program for the program ```sum1ton.o``` .
 Now if we debug the code we get the output of sum of 1 to n numbers. 

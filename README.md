@@ -100,12 +100,13 @@ Now using the below command we can simulate the ```sum1ton.o``` code and verify 
 ```
 spike pk sum1ton.o
 ```
-Now we can see the output:
+Now we can give the input as follows:
 
-![spike_output_sum1ton](https://github.com/user-attachments/assets/ac115a02-d36c-4765-8b8b-5901d3f3c90a)
+![tsak2_spike_pk_sum1ton](https://github.com/user-attachments/assets/874bef71-58fc-4e10-83f4-f7db94558673)
 
 
-Now let us debug this code
+Now let us debug this code:
+
 
 
 

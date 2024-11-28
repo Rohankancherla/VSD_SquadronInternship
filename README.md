@@ -145,9 +145,49 @@ Now similarily if we execute the code for ```O1``` compiler:
 ### Modulo Counter -
 -------------------------------
 
+A Modulo Counter is a simple digital or software-based counter that increments its value within a fixed range and resets to zero once it reaches a specified maximum. This behavior is widely used in digital systems, embedded applications, and simulation environments to handle cyclic or repetitive operations efficiently.
+
+* The counter starts at an initial value, typically 0
+* It increments by a fixed step (usually 1) with each iteration.
+* When the counter reaches a predefined maximum value (MODULO), it resets back to 0.
+* This cycling behavior ensures the counter remains bounded within a range of 0 to (MODULO - 1).
+
+### C program for the modulo counter (using leafpad)
+------------------------------------------------
+
+![c_code_modcount](https://github.com/user-attachments/assets/3c30a03a-080f-4e41-824d-def2cb466d60)
+
+### Output of the C Code in GCC
+------------------------------------------------
+
+![modcount_c](https://github.com/user-attachments/assets/810a9d7b-1302-4cc8-8f9c-50dcfce63437)
+
+### Compiling using RISC-V GCC:
+------------------------------------------------
+
+![RISC-V_GCC_O1_Ofast](https://github.com/user-attachments/assets/16271517-8739-4918-95da-f05c4fd8fe53)
 
 
+### Assembly language code for ```O1```:
+------------------------------------------------
 
+![modcount_O1_ass_code](https://github.com/user-attachments/assets/7b6c4889-b106-4a66-bdcd-60fa661b46b7)
+
+
+### Assembly language code for ```Ofast```:
+------------------------------------------------
+
+![modcount_Ofast_ass_code](https://github.com/user-attachments/assets/72806583-f8e3-4b46-9299-1238ba4758bc)
+
+### Modulo Counter OUTPUT using ```SPIKE```:
+------------------------------------------------
+
+The debugging has been done using the command 
+```
+spike -d modcount.o
+```
+
+![modcount_output_spike](https://github.com/user-attachments/assets/f99fda07-2678-4452-aa02-9fd8327e0d80)
 
 
 </details>

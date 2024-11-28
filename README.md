@@ -127,8 +127,17 @@ The next instruction is executed using the command ```  addi    sp, sp, -16 ``` 
 
 ![Task2_output_Ofast](https://github.com/user-attachments/assets/8b5f5ad9-127f-4e8f-92a2-a875a30d55ae)
 
+Now similarily if we execute the code for ```O1``` compiler:
 
+![task2_O1_output](https://github.com/user-attachments/assets/47e86de5-c4a7-4e33-9dcf-b4e3e7ff6ad0)
 
+* We can see that the command used is ```riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c``` , hence ```O1``` compiler is used.
+* Now if we see the assembly language for ```O1``` is
+
+![new_task1_15instr](https://github.com/user-attachments/assets/b0fe01cb-7e90-4f19-8b29-4dfe1ecf5624)
+
+* Again after debugging each instruction we get the same values for the stack pointer as in the ```Ofast``` case.
+* At the end of the code, at the address of ```101b4``` the value of the sum is stored.
 
 
 

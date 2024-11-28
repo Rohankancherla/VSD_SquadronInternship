@@ -83,7 +83,6 @@ It is calculated as
 <details>
 <summary><b>Task 2:</b> C </summary>
 
-
 In the previous task we have seen the contents of the assembly language program for the program ```sum1ton.o``` .
 Now if we debug the code we get the output of sum of 1 to n numbers. 
 Now the same thing should be outputed in a RISC-V compiler. We can show this using the spike command.

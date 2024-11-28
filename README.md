@@ -114,13 +114,18 @@ Now let us debug this code:
 
 ![Task2_Ofast_output](https://github.com/user-attachments/assets/949c04ad-a5dd-4735-8378-8465036c514e)
 
-*We debug the assembly language program using the command ```spike -d pk sum1ton.o``` .
-*In this debugger we debug the code for each instruction (or till the required instruction) 
+* We debug the assembly language program using the command ```spike -d pk sum1ton.o``` .
+* In this debugger we debug the code for each instruction (or till the required instruction) 
 * At the address of ```100b4``` the value of the stack pointer is ```0x0000003ffffffb50``` and after the executing the next instruction we get the value of the stackl pointer as ```0x0000003ffffffb40```.
 
 The next instruction is executed using the command ```  addi    sp, sp, -16 ``` . So if we subtract 16 in decimal it is equivalent to 10 in hexadecimal which is shown below in the calculator :
 
 ![task2_Ofast_calculator](https://github.com/user-attachments/assets/454bee73-e31d-4338-8c1a-d828e46f799e)
+
+* As we have seen in the command ```  addi    sp, sp, -16 ```, the instruction addi adds the immediate offset to the source register(sp in this case) and stores in the destination register(sp in this case, hence it is overwriting the same register ).
+* Now after executing all the instructions we get the output of the ```Ofast``` assembly code.
+
+![Task2_output_Ofast](https://github.com/user-attachments/assets/8b5f5ad9-127f-4e8f-92a2-a875a30d55ae)
 
 
 

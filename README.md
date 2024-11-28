@@ -80,17 +80,12 @@ It is calculated as
 
 <details>
 <summary><b>Task 2:</b> C based and RISC-V based programs for sum of n numbers</summary>   
-  
+
 In the previous task we have seen the contents of the assembly language program for the program ```sum1ton.o``` .
-
 Now if we debug the code we get the output of sum of 1 to n numbers. 
-
 Now the same thing should be outputed in a RISC-V compiler. We can show this using the spike command.
-
 Spike is a RISC-V simulator. 
-
 It is used for running and testing codes for RISC-V based processors.
-
 Now using the below command we can simulate the ```sum1ton.o``` code and verify the instructions.
 
 *Use the following command*

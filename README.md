@@ -87,7 +87,7 @@ Now if we debug the code we get the output of sum of 1 to n numbers. Now the sam
 Spike is a RISC-V simulator. It is used for running and testing codes for RISC-V based processors.
 Now using the below command we can simulate the ```sum1ton.o``` code and verify the instructions.
 
-*Use the following command *
+*Use the following command*
 ```
 spike pk sum1ton.o
 ```

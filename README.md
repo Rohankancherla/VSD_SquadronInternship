@@ -86,7 +86,7 @@ It is calculated as
 <summary><b>Task 2:</b> C based and RISC-V based programs for sum of n numbers</summary>   
 <br>
 
-C based
+Spike simulation
 ------------------------------------------
 In the previous task we have seen the contents of the assembly language program for the program ```sum1ton.o``` .
 Now if we debug the code we get the output of sum of 1 to n numbers. 
@@ -103,6 +103,9 @@ spike pk sum1ton.o
 Now we can see the output:
 
 ![spike_output_sum1ton](https://github.com/user-attachments/assets/ac115a02-d36c-4765-8b8b-5901d3f3c90a)
+
+
+Now let us debug this code
 
 
 

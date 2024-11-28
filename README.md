@@ -83,7 +83,7 @@ It is calculated as
 ------------------------------------
 
 <details>
-<summary><b>Task 2:</b> C based and RISC-V based programs for sum of n numbers</summary>   
+<summary><b>Task 2:</b> ### Simulating and Debugging C code with SPIKE </summary>   
 <br>
 
 Spike simulation
@@ -184,7 +184,7 @@ A Modulo Counter is a simple digital or software-based counter that increments i
 
 The debugging has been done using the command 
 ```
-spike -d modcount.o
+spike -d pk modcount.o
 ```
 
 ![modcount_output_spike](https://github.com/user-attachments/assets/f99fda07-2678-4452-aa02-9fd8327e0d80)

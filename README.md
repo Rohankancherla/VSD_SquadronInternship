@@ -76,9 +76,12 @@ It is calculated as
 100dc - 100b0 = 2c
 2c/4 = b  => 11
 ```
+</details>
 
 <details>
 <summary><b>Task 2:</b> C based and RISC-V based programs for sum of n numbers</summary>   
 <br>
+
+
 
 </details>

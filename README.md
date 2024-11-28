@@ -139,6 +139,12 @@ Now similarily if we execute the code for ```O1``` compiler:
 * Again after debugging each instruction we get the same values for the stack pointer as in the ```Ofast``` case.
 * At the end of the code, at the address of ```101b4``` the value of the sum is stored.
 
+### Application
+--------------------------------
+
+### Modulo Counter -
+-------------------------------
+
 
 
 

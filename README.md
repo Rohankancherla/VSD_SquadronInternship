@@ -422,6 +422,27 @@ THe given below table illustrates the 15 differnt instruction used in the applic
        - `opcode = 0011011`
      - **32-bit Representation:** `00000000000101000 000 01000 0011011`
      -  Adds the immediate value `1` to `s0`
+       
+8. **`ld a5, 8(sp)`**
+   - *I-Type Instruction*
+     - **Format:**  imm[11:0] | rs1 | funct3 | rd | opcode
+     - **Fields:**
+       - `imm = 8` (12-bit: 000000001000)
+       - `rs1 =x2 (sp)`
+       - `rd = x15 (a5)`
+       - `funct3 = 011`
+       - `opcode = 0000011`
+     - **32-bit Representation:** `00000000100000010 011 01111 0000011`
+     -  Loads a 64-bit value from memory at `sp + 8` into `a5`
 
-
-
+9. **`bnez a5, 100f0`**
+   - *B-Type Instruction*
+     - **Format:**   imm[12|10:5] | rs2 | rs1 | funct3 | imm[4:1|11] | opcode
+     - **Fields:**
+       - `imm = 100f0` (encoded as 00001000000000)
+       - `rs2 =x0`
+       - `rs1 = x15 (a5)`
+       - `funct3 = 001`
+       - `opcode = 1100011`
+     - **32-bit Representation:** `00001000000000001 001 01111 1100011`
+     -  Branches to address `100f0` if the value in `a5` is not `zero`.

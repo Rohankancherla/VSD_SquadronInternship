@@ -460,57 +460,57 @@ THe given below table illustrates the 15 differnt instruction used in the applic
         -  Branches to address `100dc` if the value in `s0` is not `s2`.
 
 11.  **`auipc a5, 0xffff0`**  
-   - *U-Type Instruction*  
-     - **Format:** imm[31:12] | rd | opcode  
-     - **Fields:**  
-       - `imm = 0xffff0`  
-       - `rd =  x15 (a5)`  
-       - `opcode = 0010111`  
-     - **32-bit Representation:** `11111111111111110 00000 0010111`  
-     - Adds the 20-bit immediate value `0xffff0` to the program counter (PC) and stores the result in `a5`.
+      - *U-Type Instruction*  
+        - **Format:** imm[31:12] | rd | opcode  
+        - **Fields:**  
+          - `imm = 0xffff0`  
+          - `rd =  x15 (a5)`  
+          - `opcode = 0010111`  
+        - **32-bit Representation:** `11111111111111110 00000 0010111`  
+        - Adds the 20-bit immediate value `0xffff0` to the program counter (PC) and stores the result in `a5`.
 
 12.  **`beqz a5, 10148`**
-   - *B-Type Instruction*
-     - **Format:**   imm[12|10:5] | rs2 | rs1 | funct3 | imm[4:1|11] | opcode
-     - **Fields:**
-       - `imm = 10148` (encoded as `00001000101000`)
-       - `rs2 = x0`
-       - `rs1 = x15 (a5)`
-       - `funct3 = 000`
-       - `opcode = 1100011`
-     - **32-bit Representation:** `00001000101000000 000 01111 1100011`
-     -   Branches to address `10148` if the value in `a5` is `zero`.
+      - *B-Type Instruction*
+        - **Format:**   imm[12|10:5] | rs2 | rs1 | funct3 | imm[4:1|11] | opcode
+        - **Fields:**
+          - `imm = 10148` (encoded as `00001000101000`)
+          - `rs2 = x0`
+          - `rs1 = x15 (a5)`
+          - `funct3 = 000`
+          - `opcode = 1100011`
+        - **32-bit Representation:** `00001000101000000 000 01111 1100011`
+        -   Branches to address `10148` if the value in `a5` is `zero`.
 
 13. **`jal ra, 10484`**  
-   - *J-Type Instruction*  
-     - **Format:** imm[20|10:1|11|19:12] | rd | opcode  
-     - **Fields:**  
-       - `imm = Target address `
-       - `rd = x0`  
-       - `opcode = 1101111`  
-     - **32-bit Representation:** `Dependent on the target address`  
-     - Performs an unconditional jump to a computed address.
+      - *J-Type Instruction*  
+        - **Format:** imm[20|10:1|11|19:12] | rd | opcode  
+        - **Fields:**  
+          - `imm = Target address `
+          - `rd = x0`  
+          - `opcode = 1101111`  
+        - **32-bit Representation:** `Dependent on the target address`  
+        - Performs an unconditional jump to a computed address.
 
 14. **`lw a0, 0(sp)`**
-   - *I-Type Instruction*
-     - **Format:**  imm[11:0] | rs1 | funct3 | rd | opcode
-     - **Fields:**
-       - `imm = 0` 
-       - `rs1 =x2 (sp)`
-       - `rd = x10 (a0)`
-       - `funct3 = 010`
-       - `opcode = 0000011`
-     - **32-bit Representation:** `00000000000000010 010 01010 0000011`
-     -  Loads a 32-bit word from memory at address `sp + 0` into `a0`.
+      - *I-Type Instruction*
+        - **Format:**  imm[11:0] | rs1 | funct3 | rd | opcode
+        - **Fields:**
+          - `imm = 0` 
+          - `rs1 =x2 (sp)`
+          - `rd = x10 (a0)`
+          - `funct3 = 010`
+          - `opcode = 0000011`
+        - **32-bit Representation:** `00000000000000010 010 01010 0000011`
+        -  Loads a 32-bit word from memory at address `sp + 0` into `a0`.
 
 15. **`sd s1, 40(sp)`**  
-   - *S-Type Instruction*  
-     - **Format:** imm[11:5] | rs2 | rs1 | funct3 | imm[4:0] | opcode  
-     - **Fields:**  
-       - `imm = 1944` (12-bit: `000001111001000`)  
-       - `rs2 = x15 (a5)`  
-       - `rs1 = x3 (gp)`  
-       - `funct3 = 000`  
-       - `opcode = 0100011`  
-     - **32-bit Representation:** `00000111100101111 000 00011 0100011`  
-     -  Stores the least significant byte of `a5` into memory at address `gp + 1944`.
+      - *S-Type Instruction*  
+        - **Format:** imm[11:5] | rs2 | rs1 | funct3 | imm[4:0] | opcode  
+        - **Fields:**  
+          - `imm = 1944` (12-bit: `000001111001000`)  
+          - `rs2 = x15 (a5)`  
+          - `rs1 = x3 (gp)`  
+          - `funct3 = 000`  
+          - `opcode = 0100011`  
+        - **32-bit Representation:** `00000111100101111 000 00011 0100011`  
+        -  Stores the least significant byte of `a5` into memory at address `gp + 1944`.

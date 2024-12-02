@@ -413,13 +413,13 @@ THe given below table illustrates the 15 differnt instruction used in the applic
 
 7. **`addiw s0, s0, 1`**
    - *I-Type Instruction*
-   - **Format:**  imm[11:0] | rs1 | funct3 | rd | opcode
-   - **Fields:**
-     -`imm = 1`
-     -`rs1 = x8 (s0)`
-     -`rd = x8 (s0)`
-     -`funct3 = 000`
-     -`opcode = 0011011`
+    - **Format:**  imm[11:0] | rs1 | funct3 | rd | opcode
+    - **Fields:**
+      -`imm = 1`
+      -`rs1 = x8 (s0)`
+      -`rd = x8 (s0)`
+      -`funct3 = 000`
+      -`opcode = 0011011`
    - **32-bit Representation:** `00000000000101000 000 01000 0011011`
    -  Adds the immediate value `1` to `s0`
 

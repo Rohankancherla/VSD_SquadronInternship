@@ -448,16 +448,16 @@ THe given below table illustrates the 15 differnt instruction used in the applic
      -  Branches to address `100f0` if the value in `a5` is not `zero`.
 
 10.  **`bne s0, s2, 100dc`**
-   - *B-Type Instruction*
-     - **Format:**   imm[12|10:5] | rs2 | rs1 | funct3 | imm[4:1|11] | opcode
-     - **Fields:**
-       - `imm = 100dc` (encoded as `00001000000110`)
-       - `rs2 =x18 (sp2)`
-       - `rs1 = x8 (s0)`
-       - `funct3 = 001`
-       - `opcode = 1100011`
-     - **32-bit Representation:** `00001000000110001 001 01000 1100011`
-     -  Branches to address `100dc` if the value in `s0` is not `s2`.
+      - *B-Type Instruction*
+        - **Format:**   imm[12|10:5] | rs2 | rs1 | funct3 | imm[4:1|11] | opcode
+        - **Fields:**
+          - `imm = 100dc` (encoded as `00001000000110`)
+          - `rs2 =x18 (sp2)`
+          - `rs1 = x8 (s0)`
+          - `funct3 = 001`
+          - `opcode = 1100011`
+        - **32-bit Representation:** `00001000000110001 001 01000 1100011`
+        -  Branches to address `100dc` if the value in `s0` is not `s2`.
 
 11.  **`auipc a5, 0xffff0`**  
    - *U-Type Instruction*  

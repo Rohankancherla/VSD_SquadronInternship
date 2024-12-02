@@ -317,6 +317,7 @@ Each type includes details such as bit-field ranges, example instructions, opera
 
 The below image shows the various RISC-V instruction types
 
-![image](https://github.com/user-attachments/assets/b87dfcf5-3f64-4474-8a70-b626c393d3d8)
+![image](https://github.com/user-attachments/assets/2ef09cf5-ad58-4fd0-ac5e-8f692e04ce34)
+
 
 

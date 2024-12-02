@@ -322,23 +322,106 @@ The below image shows the various RISC-V instruction types
 
 THe given below table illustrates the 15 differnt instruction used in the application ( **modulo counter**) :
 
-| **Address** | **Instruction**     | **Explanation**                                                  |
-| ----------- | ------------------- | ---------------------------------------------------------------- |
-| `fc010113`  | `addi sp, sp, -64`  | Adjust the stack pointer (`sp`) to allocate 64 bytes on the stack. |
-| `02913423`  | `sd s1, 40(sp)`     | Store the value of register `s1` into memory at `sp + 40`.        |
-| `05f5e4b7`  | `lui s1, 0x5f5e`    | Load the upper 20 bits of register `s1` with the immediate value `0x5f5e`. |
-| `00000413`  | `li s0, 0`          | Load the immediate value `0` into register `s0`.                  |
-| `00040593`  | `mv a1, s0`         | Copy the value from register `s0` into register `a1`.             |
-| `3a0000ef`  | `jal ra, 10484`     | Jump to address `10484` and store the return address in register `ra`. |
-| `0014041b`  | `addiw s0, s0, 1`   | Add the immediate value `1` to `s0` and store the result in `s0`. |
-| `00813783`  | `ld a5, 8(sp)`      | Load a 64-bit value from memory at address `sp + 8` into `a5`.     |
-| `fe079ae3`  | `bnez a5, 100f0`    | Branch to address `100f0` if the value in `a5` is not zero.        |
-| `fd241ee3`  | `bne s0, s2, 100dc` | Branch to address `100dc` if the value in `s0` is not equal to `s2`. |
-| `ffff0797`  | `auipc a5, 0xffff0` | Add the 20-bit immediate value `0xffff0` to the program counter (PC) and store the result in `a5`. |
-| `00078863`  | `beqz a5, 10148`    | Branch to address `10148` if the value in `a5` is zero.            |
-| `0e80006f`  | `j`                 | Perform an unconditional jump to a computed address.               |
-| `00012503`  | `lw a0, 0(sp)`      | Load a 32-bit word from memory at address `sp + 0` into `a0`.      |
-| `78f18c23`  | `sb a5, 1944(gp)`   | Store the least significant byte of `a5` into memory at address `gp + 1944`. |
+| **Address** | **Instruction**     |
+| ----------- | ------------------- |
+| `fc010113`  | `addi sp, sp, -64`  | 
+| `02913423`  | `sd s1, 40(sp)`     |
+| `05f5e4b7`  | `lui s1, 0x5f5e`    |
+| `00000413`  | `li s0, 0`          | 
+| `00040593`  | `mv a1, s0`         |
+| `3a0000ef`  | `jal ra, 10484`     |
+| `0014041b`  | `addiw s0, s0, 1`   | 
+| `00813783`  | `ld a5, 8(sp)`      | 
+| `fe079ae3`  | `bnez a5, 100f0`    | 
+| `fd241ee3`  | `bne s0, s2, 100dc` | 
+| `ffff0797`  | `auipc a5, 0xffff0` | 
+| `00078863`  | `beqz a5, 10148`    | 
+| `0e80006f`  | `j`                 | 
+| `00012503`  | `lw a0, 0(sp)`      | 
+| `78f18c23`  | `sb a5, 1944(gp)`   |
+
+
+### Detailed Instruction Breakdown
+
+1. **`addi sp, sp, -64`**  
+   - *I-Type Instruction*  
+     - **Format:** imm[11:0] | rs1 | funct3 | rd | opcode  
+     - **Fields:**  
+       - `imm = -64` (signed 12-bit: `1111111111000000`)  
+       - `rs1 = x2 (sp)`  
+       - `rd = x2 (sp)`  
+       - `funct3 = 000`  
+       - `opcode = 0010011`  
+     - **32-bit Representation:** `11111111110000010 000 00010 0010011`  
+     - Adjusts the stack pointer (`sp`) to allocate 64 bytes.
+
+2. **`sd s1, 40(sp)`**  
+   - *S-Type Instruction*  
+     - **Format:** imm[11:5] | rs2 | rs1 | funct3 | imm[4:0] | opcode  
+     - **Fields:**  
+       - `imm = 40` (12-bit: `000000101000`)  
+       - `rs2 = x9 (s1)`  
+       - `rs1 = x2 (sp)`  
+       - `funct3 = 011`  
+       - `opcode = 0100011`  
+     - **32-bit Representation:** `00000010100001001 011 00010 0100011`  
+     - Stores the value of `s1` into memory at `sp + 40`.
+
+3. **`lui s1, 0x5f5e`**  
+   - *U-Type Instruction*  
+     - **Format:** imm[31:12] | rd | opcode  
+     - **Fields:**  
+       - `imm = 0x5f5e000`  
+       - `rd = x9 (s1)`  
+       - `opcode = 0110111`  
+     - **32-bit Representation:** `0101111101011110 00000 0110111`  
+     - Loads the upper 20 bits of `s1` with `0x5f5e`.
+
+4. **`li s0, 0`**  
+   - *Pseudo-Instruction* (translated to `addi s0, x0, 0`)  
+     - **Format:** imm[11:0] | rs1 | funct3 | rd | opcode  
+     - **Fields:**  
+       - `imm = 0`  
+       - `rs1 = x0`  
+       - `rd = x8 (s0)`  
+       - `funct3 = 000`  
+       - `opcode = 0010011`  
+     - **32-bit Representation:** `00000000000000000 000 01000 0010011`  
+     - Loads immediate `0` into `s0`.
+
+5. **`mv a1, s0`**  
+   - *Pseudo-Instruction* (translated to `addi a1, s0, 0`)  
+     - **Format:** imm[11:0] | rs1 | funct3 | rd | opcode  
+     - **Fields:**  
+       - `imm = 0`  
+       - `rs1 = x8 (s0)`  
+       - `rd = x11 (a1)`  
+       - `funct3 = 000`  
+       - `opcode = 0010011`  
+     - **32-bit Representation:** `00000000000001000 000 01011 0010011`  
+     - Copies the value from `s0` into `a1`.
+
+6. **`jal ra, 10484`**  
+   - *J-Type Instruction*  
+     - **Format:** imm[20|10:1|11|19:12] | rd | opcode  
+     - **Fields:**  
+       - `imm = 10484` (encoded as `0000010100100000000`)  
+       - `rd = x1 (ra)`  
+       - `opcode = 1101111`  
+     - **32-bit Representation:** `00000101001000000 001 00001 1101111`  
+     - Jumps to address `10484` and stores the return address in `ra`.
+
+7. **`addiw s0, s0, 1`**
+   - *I-Type Instruction*
+   - **Format:**  imm[11:0] | rs1 | funct3 | rd | opcode
+   - **Fields:**
+     -`imm = 1`
+     -`rs1 = x8 (s0)`
+     -`rd = x8 (s0)`
+     -`funct3 = 000`
+     -`opcode = 0011011`
+   - **32-bit Representation:** `00000000000101000 000 01000 0011011`
+   -  Adds the immediate value `1` to `s0`
 
 
 

@@ -191,3 +191,133 @@ spike -d pk modcount.o
 
 
 </details>
+
+------------------------------------
+
+<details>
+<summary><b>Task 3:</b> RISC-V instruction types </summary>   
+<br>
+
+# RISC-V Instruction Types Documentation
+------------------------------------------
+
+## Instruction Types Overview
+The RISC-V ISA supports several instruction formats, each serving specific functionalities. Below are the instruction types included:
+
+- **R-Type (Register-to-Register)**
+- **I-Type (Immediate)**
+- **S-Type (Store)**
+- **B-Type (Branch)**
+- **U-Type (Upper Immediate)**
+- **J-Type (Jump)**
+
+Each type includes details such as bit-field ranges, example instructions, operations, and opcode.
+
+## Instruction Formats
+
+### 1. R-Type (Register-to-Register)
+**Bit Ranges:**
+- `opcode`: [0:6] - Specifies the operation type (e.g., arithmetic, logical).
+- `rd`: [7:11] - Destination register.
+- `funct3`: [12:14] - Operation specification (e.g., ADD, SUB).
+- `rs1`: [15:19] - First source register.
+- `rs2`: [20:24] - Second source register.
+- `funct7`: [25:31] - Further distinguishes operations (e.g., ADD vs. SUB).
+
+**Example:** `ADD rd, rs1, rs2`
+
+**Operation:** Adds the values in `rs1` and `rs2` and stores the result in `rd`.
+
+**Opcode:** `0110011`
+
+---
+
+### 2. I-Type (Immediate)
+**Bit Ranges:**
+- `opcode`: [0:6] - Specifies the operation type.
+- `rd`: [7:11] - Destination register.
+- `funct3`: [12:14] - Operation specification (e.g., ADDI, LOAD).
+- `rs1`: [15:19] - Source register.
+- `imm`: [20:31] - Immediate value (12-bit).
+
+**Example:** `ADDI rd, rs1, imm`
+
+**Operation:** Adds the immediate value `imm` to `rs1` and stores the result in `rd`.
+
+**Opcode:** `0010011`
+
+---
+
+### 3. S-Type (Store)
+**Bit Ranges:**
+- `opcode`: [0:6] - Specifies the operation type.
+- `imm[4:0]`: [7:11] - Immediate value (lower bits).
+- `funct3`: [12:14] - Operation specification (e.g., STORE).
+- `rs1`: [15:19] - Base register.
+- `rs2`: [20:24] - Source register.
+- `imm[11:5]`: [25:31] - Immediate value (upper bits).
+
+**Example:** `SW rs2, imm(rs1)`
+
+**Operation:** Stores the value in `rs2` into the memory address computed as `rs1 + imm`.
+
+**Opcode:** `0100011`
+
+---
+
+### 4. B-Type (Branch)
+**Bit Ranges:**
+- `opcode`: [0:6] - Specifies the operation type.
+- `imm[11]`: [7] - Immediate bit.
+- `imm[4:1]`: [8:11] - Immediate bits (lower).
+- `funct3`: [12:14] - Branch operation specification (e.g., BEQ, BNE).
+- `rs1`: [15:19] - First source register.
+- `rs2`: [20:24] - Second source register.
+- `imm[10:5]`: [25:30] - Immediate bits (middle).
+- `imm[12]`: [31] - Immediate bit (upper).
+
+**Example:** `BEQ rs1, rs2, imm`
+
+**Operation:** Branches to the address `PC + imm` if `rs1` equals `rs2`.
+
+**Opcode:** `1100011`
+
+---
+
+### 5. U-Type (Upper Immediate)
+**Bit Ranges:**
+- `opcode`: [0:6] - Specifies the operation type.
+- `rd`: [7:11] - Destination register.
+- `imm`: [12:31] - Immediate value.
+
+**Example:** `LUI rd, imm`
+
+**Operation:** Loads the immediate value `imm` shifted left by 12 bits into `rd`.
+
+**Opcode:** `0110111`
+
+---
+
+### 6. J-Type (Jump)
+**Bit Ranges:**
+- `opcode`: [0:6] - Specifies the operation type.
+- `rd`: [7:11] - Destination register.
+- `imm[20]`: [12] - Immediate bit.
+- `imm[10:1]`: [13:22] - Immediate bits (lower).
+- `imm[11]`: [23] - Immediate bit.
+- `imm[19:12]`: [24:31] - Immediate bits (upper).
+
+**Example:** `JAL rd, imm`
+
+**Operation:** Jumps to the address `PC + imm` and stores the return address in `rd`.
+
+**Opcode:** `1101111`
+
+---
+
+## Usage
+
+This documentation is structured for quick access and clarity, designed for developers and students exploring RISC-V ISA.
+
+Feel free to integrate this information into your projects or educational materials. For questions or suggestions, open an issue or contribute to the repository!
+

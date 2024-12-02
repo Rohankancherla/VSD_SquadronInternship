@@ -320,4 +320,25 @@ The below image shows the various RISC-V instruction types
 ![image](https://github.com/user-attachments/assets/2ef09cf5-ad58-4fd0-ac5e-8f692e04ce34)
 
 
+THe given below table illustrates the 15 differnt instruction used in the application ( **modulo counter**) :
+
+| **Address** | **Instruction**     | **Explanation**                                                  |
+| ----------- | ------------------- | ---------------------------------------------------------------- |
+| `fc010113`  | `addi sp, sp, -64`  | Adjust the stack pointer (`sp`) to allocate 64 bytes on the stack. |
+| `02913423`  | `sd s1, 40(sp)`     | Store the value of register `s1` into memory at `sp + 40`.        |
+| `05f5e4b7`  | `lui s1, 0x5f5e`    | Load the upper 20 bits of register `s1` with the immediate value `0x5f5e`. |
+| `00000413`  | `li s0, 0`          | Load the immediate value `0` into register `s0`.                  |
+| `00040593`  | `mv a1, s0`         | Copy the value from register `s0` into register `a1`.             |
+| `3a0000ef`  | `jal ra, 10484`     | Jump to address `10484` and store the return address in register `ra`. |
+| `0014041b`  | `addiw s0, s0, 1`   | Add the immediate value `1` to `s0` and store the result in `s0`. |
+| `00813783`  | `ld a5, 8(sp)`      | Load a 64-bit value from memory at address `sp + 8` into `a5`.     |
+| `fe079ae3`  | `bnez a5, 100f0`    | Branch to address `100f0` if the value in `a5` is not zero.        |
+| `fd241ee3`  | `bne s0, s2, 100dc` | Branch to address `100dc` if the value in `s0` is not equal to `s2`. |
+| `ffff0797`  | `auipc a5, 0xffff0` | Add the 20-bit immediate value `0xffff0` to the program counter (PC) and store the result in `a5`. |
+| `00078863`  | `beqz a5, 10148`    | Branch to address `10148` if the value in `a5` is zero.            |
+| `0e80006f`  | `j`                 | Perform an unconditional jump to a computed address.               |
+| `00012503`  | `lw a0, 0(sp)`      | Load a 32-bit word from memory at address `sp + 0` into `a0`.      |
+| `78f18c23`  | `sb a5, 1944(gp)`   | Store the least significant byte of `a5` into memory at address `gp + 1944`. |
+
+
 

@@ -315,9 +315,8 @@ Each type includes details such as bit-field ranges, example instructions, opera
 
 ---
 
-## Usage
+The below image shows the various RISC-V instruction types
 
-This documentation is structured for quick access and clarity, designed for developers and students exploring RISC-V ISA.
+![image](https://github.com/user-attachments/assets/b87dfcf5-3f64-4474-8a70-b626c393d3d8)
 
-Feel free to integrate this information into your projects or educational materials. For questions or suggestions, open an issue or contribute to the repository!
 

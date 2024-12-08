@@ -539,8 +539,7 @@ Hence we can install them using the command
 - We can perform the simulation by either cloning the github repository or by creating a new directory.
 - If we are cloning, then we need to clone the repository :     ,
    - We need to use the command ``` git clone ```
-   - ![gitclonedone](https://github.com/user-attachments/assets/ce018e69-6c17-4753-ae84-df771ec73772)
-   - 
+   - ![gitclonedone](https://github.com/user-attachments/assets/ce018e69-6c17-4753-ae84-df771ec73772) 
    - Then ``` ls -ltr```
    - ```cd iiitb_rv32i ``` to code in the ```iitb_rv32i``` directory.
    - ![gitclone_ls-ltr](https://github.com/user-attachments/assets/be68ceb5-a50c-425a-ac1f-d3294f09a438)
@@ -553,8 +552,49 @@ Hence we can install them using the command
    - Creating a new directory using ``` mkdir rohan```
    - Creating 2 files using ```touch``` as rohan_rv32i.v and rohan_rv32i_tb.v
    - Copy the code the from the reference github (because writing the testbench and designing it is not part of this internship) and paste it in our reference files in rohan_rv32i.v and rohan_rv32i_tb.v files respectively.
+   - ![mkdir_rohan](https://github.com/user-attachments/assets/46e60469-caff-4021-8410-4d200076d3f1)
    - In order to simulate the code we follow the above simulation commands with the new files in your command.
+   - ![gtk_St](https://github.com/user-attachments/assets/1386fe5a-a9c4-43b9-b756-1d5fc2340f16)
+
+
+- Then the GTKWave will be opened and we need to check for all the instructions.
+
+Now we need to analyse the waveforms of the instructions that are used in the verilog code
+**``` Instruction 1: ADD R6,R2,R1  ```**
 
 
 
-- Then the GTKWave will be opened and we need to check for all the instructions. 
+**``` Instruction 2: SUB R7,R1.R2  ```**
+
+
+
+**``` Instruction 3: AND R8,R1,R3  ```**
+
+
+
+**``` Instruction 4: OR R9,R2,R5  ```**
+
+
+
+**``` Instruction 5: XOR R10,R2,R4  ```**
+
+
+
+**``` Instruction 6: SLT R1,R2,R4  ```**
+
+
+
+**``` Instruction 7: ADDI R12,R4,5  ```**
+
+
+
+**``` Instruction 8: BEQ R0,R0,15  ```**
+
+
+
+**``` Instruction 9: BNE R0,R1,20  ```**
+
+
+
+**``` Instruction 10: SLL R15,R1,R2  ```**
+

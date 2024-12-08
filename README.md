@@ -539,16 +539,11 @@ Hence we can install them using the command
 - We can perform the simulation by either cloning the github repository or by creating a new directory.
 - If we are cloning, then we need to clone the repository :     ,
    - We need to use the command ``` git clone ```
-
-![gitclonedone](https://github.com/user-attachments/assets/ce018e69-6c17-4753-ae84-df771ec73772)
-
-
+   - ![gitclonedone](https://github.com/user-attachments/assets/ce018e69-6c17-4753-ae84-df771ec73772)
+   - 
    - Then ``` ls -ltr```
    - ```cd iiitb_rv32i ``` to code in the ```iitb_rv32i``` directory.
-
-![gitclone_ls-ltr](https://github.com/user-attachments/assets/be68ceb5-a50c-425a-ac1f-d3294f09a438)
-
-
+   - ![gitclone_ls-ltr](https://github.com/user-attachments/assets/be68ceb5-a50c-425a-ac1f-d3294f09a438)
    - Then in order to simulate and run the verilog code ``` iverilog -o iiitb_rv32i rj_rv32i.v rj_rv32i_tb.v```
    - ```ls -ltr``` to list the files.
    - ```./iitb_rv32i``` for generating the vcd file.

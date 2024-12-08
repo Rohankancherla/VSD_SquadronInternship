@@ -538,4 +538,18 @@ Hence we can install them using the command
 
 - We can perform the simulation by either cloning the github repository or by creating a new directory.
 - If we are cloning, then we need to clone the repository :     ,
-   - 
+   - We need to use the command ``` git clone ```
+   - Then ``` ls -ltr```
+   - ```cd iiitb_rv32i ``` to code in the ```iitb_rv32i``` directory.
+   - Then in order to simulate and run the verilog code ``` iverilog -o iiitb_rv32i rj_rv32i.v rj_rv32i_tb.v```
+   - ```ls -ltr``` to list the files.
+   - ```./iitb_rv32i``` for generating the vcd file.
+   - Then in order to visualize the output using gtkwave we use the command ```gtkwave iiitb_rv32i.vcd```
+   - Now we need to check all the instructions.
+- If we are creating a new directory and performing in it
+   - Creating a new directory using ``` mkdir rohan```
+   - Creating 2 files using ```touch``` as rohan_rv32i.v and rohan_rv32i_tb.v
+   - Copy the code the from the reference github (because writing the testbench and designing it is not part of this internship) and paste it in our reference files in rohan_rv32i.v and rohan_rv32i_tb.v files respectively.
+   - In order to simulate the code we follow the above simulation commands with the new files in your command.
+
+- Then the GTKWave will be opened and we need to check for all the instructions. 

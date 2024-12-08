@@ -560,41 +560,56 @@ Hence we can install them using the command
 - Then the GTKWave will be opened and we need to check for all the instructions.
 
 Now we need to analyse the waveforms of the instructions that are used in the verilog code
+
 **``` Instruction 1: ADD R6,R2,R1  ```**
 
+![add_4](https://github.com/user-attachments/assets/c21db68c-0288-4cda-bdaf-26396a85438a)
 
 
 **``` Instruction 2: SUB R7,R1.R2  ```**
 
+![sub_4](https://github.com/user-attachments/assets/312147d9-d32a-462b-8e5d-c0493307b31e)
 
 
 **``` Instruction 3: AND R8,R1,R3  ```**
 
+![and_3_4](https://github.com/user-attachments/assets/6e957583-26fc-49cd-ad6c-cd6edf031ca6)
 
 
 **``` Instruction 4: OR R9,R2,R5  ```**
 
+![OR_4_4](https://github.com/user-attachments/assets/7a0d5ae5-92cc-4a8e-b594-6bc9689f81c6)
 
 
 **``` Instruction 5: XOR R10,R2,R4  ```**
 
+![XOR_5_4](https://github.com/user-attachments/assets/56f3a33f-bb00-4332-a54f-e14c46828437)
 
 
 **``` Instruction 6: SLT R1,R2,R4  ```**
 
+![SLT_6_4](https://github.com/user-attachments/assets/4342c554-0862-402f-9580-18fccc3d912d)
 
 
 **``` Instruction 7: ADDI R12,R4,5  ```**
 
+![ADDI_7_4](https://github.com/user-attachments/assets/64189f1c-5a75-4487-a313-c53a347f8a7b)
 
 
 **``` Instruction 8: BEQ R0,R0,15  ```**
 
+![BEQ_8_4](https://github.com/user-attachments/assets/f7ddc0bb-63ea-4a39-b7ca-4be5bfeb2524)
 
 
-**``` Instruction 9: BNE R0,R1,20  ```**
+**``` Instruction 9: BNE R0,R1,2  ```**
 
+![BNE_9_4](https://github.com/user-attachments/assets/c48ac39a-1f8c-4a54-932d-924c784dae0f)
 
 
 **``` Instruction 10: SLL R15,R1,R2  ```**
 
+![SLL_10_4](https://github.com/user-attachments/assets/3deefd03-aa00-4673-8f4a-613c9e4b365e)
+
+</details>
+
+------------------------------------------

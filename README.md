@@ -1,4 +1,4 @@
-# VSD_SquadronInternship
+x# VSD_SquadronInternship
 The program is based on the RISC-V architecture and uses open-source tools to teach people about VLSI chip design and RISC-V. The instructor for this internship is Kunal Ghosh Sir.
 
 <details>
@@ -514,3 +514,28 @@ THe given below table illustrates the 15 differnt instruction used in the applic
           - `opcode = 0100011`  
         - **32-bit Representation:** `00000111100101111 000 00011 0100011`  
         -  Stores the least significant byte of `a5` into memory at address `gp + 1944`.
+
+</details>
+
+------------------------------------
+
+<details>
+<summary><b>Task 4:</b> Functional simulation of RISC-V Core Verilog netlist and testbench and observing the waveforms </summary>   
+<br>
+
+For performing the simulation, we need to first simulate. We can perform it by coding it in verilog and simulating the code in gtkwave.
+
+Hence we can install them using the command 
+
+```sudo apt install iverilog gtkwave```
+
+![iverlog_install](https://github.com/user-attachments/assets/d9b41866-1d5b-4605-bd2a-0d09e089a32f)
+
+
+
+# Steps to perfrom the functional simulation
+--------------------------------------------
+
+- We can perform the simulation by either cloning the github repository or by creating a new directory.
+- If we are cloning, then we need to clone the repository :     ,
+   - 

@@ -537,7 +537,7 @@ Hence we can install them using the command
 --------------------------------------------
 
 - We can perform the simulation by either cloning the github repository or by creating a new directory.
-- If we are cloning, then we need to clone the repository :     ,
+- If we are cloning, then we need to clone the repository :  https://github.com/vinayrayapati/rv32i/   ,
    - We need to use the command ``` git clone ```
    - ![gitclonedone](https://github.com/user-attachments/assets/ce018e69-6c17-4753-ae84-df771ec73772) 
    - Then ``` ls -ltr```

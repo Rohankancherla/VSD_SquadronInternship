@@ -1,4 +1,4 @@
-x# VSD_SquadronInternship
+VSD_SquadronInternship
 The program is based on the RISC-V architecture and uses open-source tools to teach people about VLSI chip design and RISC-V. The instructor for this internship is Kunal Ghosh Sir.
 
 <details>
@@ -613,3 +613,16 @@ Now we need to analyse the waveforms of the instructions that are used in the ve
 </details>
 
 ------------------------------------------
+
+<details>
+<summary><b>Task 5:</b> Implementing Mod counter using VSD Squadron mini </summary>   
+<br>
+
+For performing the simulation, we need to first simulate. We can perform it by coding it in verilog and simulating the code in gtkwave.
+
+Hence we can install them using the command 
+
+
+
+# Steps to perfrom the functional simulation
+--------------------------------------------

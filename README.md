@@ -641,18 +641,12 @@ The Modulo Counter increments values from 0 up to a user-specified input (via pu
 # Components Required
 -------------------------------
 
-**VSDSquadron Mini** : RISC-V based SoC development kit.
-
-**Push Buttons (3)**: For binary input (connected to GPIO pins).
-
-**LEDs (3)**: To display the counter values.
-
-**Breadboard and Jumper Wires**: For prototyping and connections.
-
-**Visual Studio Code**: For software development.
-
-**PlatformIO IDE**: A professional IDE for embedded development.
-
+- **VSDSquadron Mini** : RISC-V based SoC development kit.
+- **Push Buttons (3)**: For binary input (connected to GPIO pins).
+- **LEDs (3)**: To display the counter values.
+- **Breadboard and Jumper Wires**: For prototyping and connections.
+- **Visual Studio Code**: For software development.
+- **PlatformIO IDE**: A professional IDE for embedded development.
 
 # Hardware Connections
 

@@ -625,15 +625,18 @@ This task contains documentation for the implementation of a Modulo Counter (0�
 
 The Modulo Counter increments values from 0 up to a user-specified input (via push buttons) and resets to 0. The current state of the counter is displayed on LEDs, providing a visual representation of the operation. This project uses GPIO pins for input (push buttons) and output (LEDs), configured using the PlatformIO IDE.
 
-Counter Truth Table: 
+# Counter Truth Table: 
 
-| Input (Binary)	| Count Sequence       | 
-| --------------- | -------------------- |
-| 0	            | 0                    |
-| 1	            | 0 → 1                |
-| 2	            | 0 → 1 → 2            |  
-| 3	            | 0 → 1 → 2 → 3        |
-| 7	            | 0 → 1 → 2 → ... → 7  |
+| Input (Binary)	| Count Sequence                   | 
+| --------------- | -------------------------------- |
+| 0	            | 0                                |
+| 1	            | 0 → 1                            |
+| 2	            | 0 → 1 → 2                        |   
+| 3	            | 0 → 1 → 2 → 3                    |
+| 4               | 0 → 1 → 2 → 3 → 4                |
+| 5               | 0 → 1 → 2 → 3 → 4 → 5            |   
+| 6               | 0 → 1 → 2 → 3 → 4 → 5 → 6        |
+| 7	            | 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7    |
 
 # Components Required
 -------------------------------

@@ -639,23 +639,27 @@ Counter Truth Table:
 -------------------------------
 
 **VSDSquadron Mini** : RISC-V based SoC development kit.
+
 **Push Buttons (3)**: For binary input (connected to GPIO pins).
+
 **LEDs (3)**: To display the counter values.
+
 **Breadboard and Jumper Wires**: For prototyping and connections.
+
 **Visual Studio Code**: For software development.
+
 **PlatformIO IDE**: A professional IDE for embedded development.
 
 
 # Hardware Connections
----------------------------------
 
-# Inputs (Push Buttons):
+## Inputs (Push Buttons):
 
 - Button 1: Connected to PD3 (Least Significant Bit - LSB)
 - Button 2: Connected to PD4 (Bit 1)
 - Button 3: Connected to PD5 (Most Significant Bit - MSB)
 
-# Outputs (LEDs):
+## Outputs (LEDs):
 
 - LED 1: Connected to PD0 (Least Significant Bit - LSB)
 - LED 2: Connected to PD1 (Bit 1)

@@ -618,11 +618,51 @@ Now we need to analyse the waveforms of the instructions that are used in the ve
 <summary><b>Task 5:</b> Implementing Mod counter using VSD Squadron mini </summary>   
 <br>
 
-For performing the simulation, we need to first simulate. We can perform it by coding it in verilog and simulating the code in gtkwave.
+This task contains documentation for the implementation of a Modulo Counter (0–7) using the VSDSquadron Mini. The project showcases the practical application of digital logic and RISC-V architecture to perform a simple counting operation with user-defined input.
 
-Hence we can install them using the command 
+# Overview
+-------------------------------------
+
+The Modulo Counter increments values from 0 up to a user-specified input (via push buttons) and resets to 0. The current state of the counter is displayed on LEDs, providing a visual representation of the operation. This project uses GPIO pins for input (push buttons) and output (LEDs), configured using the PlatformIO IDE.
+
+Counter Truth Table: 
+
+| Input (Binary)	| Count Sequence       | 
+| --------------- | -------------------- |
+| 0	            | 0                    |
+| 1	            | 0 → 1                |
+| 2	            | 0 → 1 → 2            |  
+| 3	            | 0 → 1 → 2 → 3        |
+| 7	            | 0 → 1 → 2 → ... → 7  |
+
+# Components Required
+-------------------------------
+
+**VSDSquadron Mini** : RISC-V based SoC development kit.
+**Push Buttons (3)**: For binary input (connected to GPIO pins).
+**LEDs (3)**: To display the counter values.
+**Breadboard and Jumper Wires**: For prototyping and connections.
+**Visual Studio Code**: For software development.
+**PlatformIO IDE**: A professional IDE for embedded development.
 
 
+# Hardware Connections
+---------------------------------
 
-# Steps to perfrom the functional simulation
---------------------------------------------
+# Inputs (Push Buttons):
+
+- Button 1: Connected to PD3 (Least Significant Bit - LSB)
+- Button 2: Connected to PD4 (Bit 1)
+- Button 3: Connected to PD5 (Most Significant Bit - MSB)
+
+# Outputs (LEDs):
+
+- LED 1: Connected to PD0 (Least Significant Bit - LSB)
+- LED 2: Connected to PD1 (Bit 1)
+- LED 3: Connected to PD2 (Most Significant Bit - MSB)
+
+
+# Programming the Modulo Counter
+The project code configures the GPIO pins of the VSDSquadron Mini to implement the counter logic. The counter reads binary inputs, counts from 0 to the user-defined value, and displays the result on LEDs. The entire process is managed by an infinite loop (while(1)), ensuring continuous operation.
+
+

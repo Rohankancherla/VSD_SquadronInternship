@@ -615,7 +615,7 @@ Now we need to analyse the waveforms of the instructions that are used in the ve
 ------------------------------------------
 
 <details>
-<summary><b>Task 5:</b> Implementing Mod counter using VSD Squadron mini </summary>   
+<summary><b>Task 5:</b> Implementing Modulo counter using VSD Squadron mini </summary>   
 <br>
 
 This task contains documentation for the implementation of a Modulo Counter (0–7) using the VSDSquadron Mini. The project showcases the practical application of digital logic and RISC-V architecture to perform a simple counting operation with user-defined input.

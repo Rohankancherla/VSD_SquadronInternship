@@ -668,6 +668,10 @@ The Modulo Counter increments values from 0 up to a user-specified input (via pu
 - LED 2: Connected to PD1 (Bit 1)
 - LED 3: Connected to PD2 (Most Significant Bit - MSB)
 
+# Circuit Diagram 
+
+<img width="456" alt="Screenshot 2024-12-12 at 11 33 47 PM" src="https://github.com/user-attachments/assets/da8e4235-2cbb-4f8b-941c-20ab266e62e8" />
+
 
 # Programming the Modulo Counter
 The project code configures the GPIO pins of the VSDSquadron Mini to implement the counter logic. The counter reads binary inputs, counts from 0 to the user-defined value, and displays the result on LEDs. The entire process is managed by an infinite loop (while(1)), ensuring continuous operation.

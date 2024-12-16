@@ -782,3 +782,12 @@ uint8_t Read_Button_Input(void)
 # Application Video
 
 [Video link for Modulo Counter](https://drive.google.com/file/d/1hc1FRkJlt6i-RTdVixEaFqQhGT0ZxChd/view?usp=drive_link)
+
+
+<details>
+<summary></b> Acknowledgement</summary>   
+<br>
+
+>* I would like to thank Kunal Ghosh Sir for providing me with this opportunity to work on the Mod Counter project using the VSD Squadron Mini board based on the RISC-V architecture. This experience has helped me gain practical knowledge and deepen my understanding of digital systems and open-source hardware. I truly appreciate the chance to learn and apply these concepts.*
+
+</details>

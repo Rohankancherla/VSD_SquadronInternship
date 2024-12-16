@@ -652,15 +652,15 @@ The Modulo Counter increments values from 0 up to a user-specified input (via pu
 
 ## Inputs (Push Buttons):
 
-- Button 1: Connected to PD3 (Least Significant Bit - LSB)
+- Button 1: Connected to PD3 (Least Significant Bit - LSB) ->***:** Rightmost button in the video* 
 - Button 2: Connected to PD4 (Bit 1)
-- Button 3: Connected to PD5 (Most Significant Bit - MSB)
+- Button 3: Connected to PD5 (Most Significant Bit - MSB) ->***:** Lefttmost button in the video* 
 
 ## Outputs (LEDs):
 
-- LED 1: Connected to PD0 (Least Significant Bit - LSB) >***NOTE:** Yellow/ Rightmost lED in the video*   
+- LED 1: Connected to PD0 (Least Significant Bit - LSB) ->***:** Yellow/ Rightmost lED in the video*   
 - LED 2: Connected to PD6 (Bit 1)
-- LED 3: Connected to PD2 (Most Significant Bit - MSB)
+- LED 3: Connected to PD2 (Most Significant Bit - MSB) ->***:** RED/ Leftmost lED in the video* 
 
 # Circuit Diagram 
 

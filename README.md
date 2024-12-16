@@ -779,4 +779,7 @@ uint8_t Read_Button_Input(void)
 }
 ```
 
+# Application Video
+-------------------------------
 
+[Video link for Modulo Counter](https://drive.google.com/file/d/1hc1FRkJlt6i-RTdVixEaFqQhGT0ZxChd/view?usp=drive_link)

@@ -658,7 +658,7 @@ The Modulo Counter increments values from 0 up to a user-specified input (via pu
 
 ## Outputs (LEDs):
 
-- LED 1: Connected to PD0 (Least Significant Bit - LSB) >* Yellow/ Rightmost LED in the Video*
+- LED 1: Connected to PD0 (Least Significant Bit - LSB) >***NOTE:** Yellow/ Rightmost lED in the video*   
 - LED 2: Connected to PD6 (Bit 1)
 - LED 3: Connected to PD2 (Most Significant Bit - MSB)
 
